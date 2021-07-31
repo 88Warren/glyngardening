@@ -1,0 +1,114 @@
+<% layout('partials/boilerplate') %>
+
+<section>
+    <div class="hero">
+        <div class="cta">
+            <p class="captionCapital gText darkText">Commercial and Domestic Services</p>
+            <p class="captionTitle gText darkText">We bring<br>your garden<br>to life</p>
+            <button class="captionButton lightButton"><center><a href="#file" class="captionPortfolio gText whiteText"><span class="iconify" data-icon="mdi:magnify" data-inline="false" style="color: #fff;" data-width="35" data-height="25"></span>Portfolio</a></center></button>
+        </div>
+        <div class="collage">
+            <img src="/Images/collage.jpg" alt="Before during and after picture of landscape">
+        </div>
+    </div>
+</section>
+
+<section class="portfolio" id="file">
+    <div class="portfolioTop">
+        <p class="inspire gText darkText">Our inspiring work</p>
+        <div class="vl line1"></div>
+        <p class="iText gText darkText">Here are some examples of the work we have undertaken on behalf of our clients. Whatever you are looking for to renew, revive or completely reimagine your outdoor space, we can help! Get in touch for a free consultation and quote today.</p>
+    </div>
+    <div class="portfolioImg">
+        <img class="item1" src="/Images/collage/landscape.jpg" alt="landscape">
+        <img class="item2" src="/Images/collage/fence.jpg" alt="fence">
+        <img class="item3" src="/Images/collage/hedgeTrim.jpg" alt="hedge Trim">
+        <img class="item4"  src="/Images/collage/painting.jpg" alt="Painting">
+        <img class="item5"  src="/Images/collage/stones.jpg" alt="landscape">
+        <img class="item6"  src="/Images/collage/flowerbed.jpg" alt="flowerbed">
+        <img class="item7"  src="/Images/collage/decking.jpg" alt="decking"> 
+        <img class="item8"  src="/Images/collage/flowerbed2.jpg" alt="flowerbed">
+        <img class="item9"  src="/Images/collage/hedgeTrim2.jpg" alt="hedge trim">   
+    </div>
+</section>
+<section class="whatWeDo">
+    <div class="whatWeDoTop">
+        <p class="wwdTitle gText darkText">What we can do for you</p>
+        <div class="vl line2"></div>
+        <p class="wwdPara gText darkText">We are experts in all forms of gardening services.  Whether you are looking for a regular grass or hedge cutting service, need an outdoor space cleared ahead of a major project, or want help and imaginative ideas to redesign your garden or create a relaxing and something considerably more  outdoor space, we can advise, provide unique solutions and manage the entire project on your behalf, for a competitive price. Contact us today to arrange your free consultation and quotation.</p>
+    </div>
+    <div class="services">
+        <div class="grassCutting card">
+            <p class="gText darkText">Grass Cutting, Hedge Trimming & Weeding</p>
+            <center><img src="/Images/hedgetrim.jpg" alt="After picture of hedge Trim"></center>
+            <p class="gText lightText">We provide regular weeding, grass & hedge cutting for many of our clients.  Never have to worry about these jobs again. </p>
+        </div>
+        <div class="fencing card">
+            <p class="gText darkText">Fencing</p>
+            <center><img src="/Images/fence.jpg" alt="New fence"></center>
+            <p class="gText lightText">Broken, collapsed or rotten fencing? We can completely rebuild or replace your existing fencing with a more attractive and contemporary design!</p>
+        </div>
+        <div class="decking card">
+            <p class="gText darkText">Decking</p>
+            <center><img src="/Images/decking.jpg" alt="Decking revamped"></center>
+            <p class="gText lightText">If you want to create a new low-maintenance & something considerably more  seating area, decking is perfect! We have lots of experience in creating fabulous decking solutions for our clients</p>
+        </div>
+        <div class="carpentry card">
+            <p class="gText darkText">Garden Furniture, Planters and Flowerbed Creation</p>
+            <center><img src="/Images/flowerbed.jpg" alt="New flowerbed built out of wood"></center>
+            <p class="gText lightText">Looking for bespoke garden furniture, wooden flowerbeds or planters? We can design, build & install something that is completely unique to you and perfect for your space. </p>
+        </div>
+        <div class="jetwashing card">
+            <p class="gText darkText">Jetwashing</p>
+            <center><img src="/Images/jetwashing.jpg" alt="Newly jetwashed driveway"></center>
+            <p class="gText lightText">Looking to clean and brighten up your drives, pathways and exterior walls? We can help!</p>
+        </div>
+        <div class="painting card">
+            <p class="gText darkText">Painting</p>
+            <center><img src="/Images/painting.jpg" alt="Upscaled furniture painted"></center>
+            <p class="gText lightText">All types of outdoor painting undertaken, whether its garden furniture, decking, fences... just ask!</p>
+        </div>
+    </div>
+</section>
+<section class="contact" id="contactForm">
+    <div class="companyInfo">
+        <p class="ciTitle gText darkText">Get in touch</p>
+        <div class="vl line3"></div>
+        <div class="ciDetails">
+            <p class="gText darkText"><span>Call:</span> 07561 309864 <br><span>Email:</span> g.g.services@outlook.com</p>
+        </div>
+    </div>
+    <div class="contactForm">
+        <form action = "send" method="POST" class="form" role="form">
+            <div class="success"></div>
+            <p class="fName">
+                <label for="fname" class="gText lightText">First Name</label>
+                <input type="text" id="fname" name="fname" >
+                <br>
+            </p>
+            <p class="lName">
+                <label for="lname" class="gText lightText">Last Name</label>
+                <input type="text" id="lname" name="lname">
+                <br>
+            </p>
+            <p class="phone">
+                <label for="phone" class="gText lightText">Phone Number</label>
+                <input type="tel" id="phone" name="phone">
+                <br>
+            </p>
+            <p class="email">
+                <label for="email" class="gText lightText">Email</label>
+                <input type="email" id="email" name="email">
+                <br>
+            </p>
+            <p class="message">
+                <label for="message" class="gText lightText">Message</label>
+                <textarea type="text" id="message" name="message" rows="14"></textarea>
+                <br>
+            </p>
+            <p class="send">
+                <button class="send gText whiteText lightButton" type="submit" value="send" name="submit">Submit</button>
+            </p>
+        </form>
+    </div>
+</section>

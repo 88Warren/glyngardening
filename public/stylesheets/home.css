@@ -1,0 +1,595 @@
+/* body */
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* fonts */
+@font-face {
+    font-family: 'gardening'; 
+    src: url('/fonts/DK\ Garden\ Gnome.otf');
+}
+
+.gText{font-family: 'gardening';}
+.darkText{color: #136637}
+.lightText{color: #38A639}
+.whiteText{color: #fff;}
+
+/* buttons */
+.lightButton{background-color: #38A639;}
+.whiteButton{background-color: #fff;}
+
+/* lines */
+.vl{
+    border-left: 6px solid #38A639;
+    border-radius: 0.2rem;
+    height: 5.5rem;
+    margin: auto;
+}
+
+/* navbar */
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* fonts */
+@font-face {
+  font-family: 'gardening'; 
+  src: url('/fonts/DK\ Garden\ Gnome.otf');
+}
+
+.gText{font-family: 'gardening';}
+.darkText{color: #136637}
+.lightText{color: #38A639}
+.whiteText{color: #fff;}
+  
+  body {
+    background: #bada55;
+    font-family: 'gardening';
+    font-size: 1rem;
+  }
+
+  #logo img{
+    width: 7rem;
+    padding-top: 1rem;
+  }
+  
+  header {
+    background: #e5e5e5;
+    color: white;
+    padding: 0.5rem;
+    position: relative;
+    height: auto;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  nav#primary ul {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  
+  nav#primary li {
+    display: block;
+  }
+  
+  nav#primary li {
+    margin-left: 3rem;
+  }
+  
+  nav#primary li a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color .2s;
+  }
+  
+  #toggle {
+    display: none;
+    color: #38A639;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: color .2s;
+  }
+  
+  #toggle i {
+    display: block;
+    background:#38A639;
+    height: 0.4rem;
+    margin-bottom: 0.25rem;
+    border-radius: 0.25rem;
+    transition: color .2s;
+  }
+  
+  nav#primary li a:hover,
+  #toggle:hover {
+    color: #136637;
+  }
+  
+  #toggle:hover i {
+    background: #136637;
+  }
+  
+  @media (max-width: 800px) {
+    nav#primary {
+      position: absolute;
+      top: -100%;
+      left: 0%;
+      background: black;
+      width: 100%;
+      padding: 20px 0;
+      transition: top .2s;
+      z-index: -1;
+    }
+    nav#primary.open {
+      top: 100%;
+    }
+    nav#primary ul {
+      display: block;
+      align-items: center;
+      height: 100%;
+    }
+    nav#primary li {
+      margin-left: 0px;
+    }
+    nav#primary ul li a {
+      display: block;
+      text-align: center;
+      padding: 10px 0;
+      border-bottom: solid 1px yellow;
+      width: 90%;
+      margin: auto;
+    }
+    #toggle {
+      display:block;
+    }
+  }
+  
+
+/* .head{
+    display: grid;
+    grid-template-columns: 0.1fr 0.85fr 1fr 0.25fr 0.25fr 0.1fr;
+    grid-template-rows: auto;
+    background-color: #e5e5e5;
+} */
+
+  
+
+/* .socialTop, */
+.socialBottom{
+    grid-area: socialTop;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* .search{
+    grid-area: search;
+    display: grid;
+    align-items: center;
+}
+
+.search button, .send button{
+    box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.75);
+    border-radius: 15px;
+    padding: 0.5rem 1rem;
+} */
+
+/* hero */
+.hero, .portfolioTop, .whatWeDoTop, .companyInfo{
+    display: grid;
+    grid-template-columns: 0.1fr 1fr 0.25fr 1fr 0.1fr;
+    grid-template-rows: auto;
+    padding-bottom: 5rem;
+}
+
+.hero{
+    grid-template-areas: ". cta . collage .";
+    background-image: url("/Images/leaves-pattern.png");
+    padding-top: 5rem;
+}
+
+.cta{grid-area: cta;}
+
+.captionCapital{
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.captionTitle{
+    font-size: 4rem;
+    padding: 3rem 0;
+}
+
+.captionButton{
+    padding: 0.75rem;
+    width: 13rem;
+    border-radius: 0.75rem;
+    box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.75);
+    margin-bottom: 5rem;
+}
+
+.facebook, .whatsapp{
+    padding: 1rem 1rem 0 0;
+}
+
+.captionPortfolio{
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+}
+
+.collage{
+    grid-area: collage;
+    display: grid;
+    align-items: center;
+}
+
+.collage img{
+    width: 35rem;
+    border-radius: 2.5rem;
+}
+
+/* portfolio */
+.portfolio, .contact{
+    background-color: #e5e5e5;
+    padding: 5rem 0;
+}
+
+.portfolioTop{
+    grid-template-areas: ". inspire line1 iText .";
+}
+
+.inspire, .wwdTitle, .ciTitle{
+    font-size: 2rem;
+    display: grid;
+    align-items: center;
+}
+
+.inspire{grid-area: inspire;}
+.line1{grid-area: line1;}
+.iText{grid-area: iText;}
+
+.iText, .wwdPara, .ciDetails{
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    letter-spacing: 0.1rem;
+    line-height: 1.5rem;
+}
+
+.portfolioImg{
+    display: grid;
+    grid-template-columns: 0.1fr repeat(3, 0.75fr) 0.1fr;
+    grid-template-rows: auto;
+    grid-template-areas: ". item1 item2 item3 ."
+    ". item4 item5 item6 ."
+    ". item7 item8 item9 .";
+}
+
+.item1{grid-area: item1;}
+.item2{grid-area: item2;}
+.item3{grid-area: item3;}
+.item4{grid-area: item4;}
+.item5{grid-area: item5;}
+.item6{grid-area: item6;}
+.item7{grid-area: item7;}
+.item8{grid-area: item8;}
+.item9{grid-area: item9;}
+
+.item1, .item2, .item3, .item4, .item5, .item6, .item7, .item8, .item9{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* services */
+.whatWeDo{
+    background-image: url("/Images/leaves-pattern.png");
+    padding: 5rem 0;
+}
+
+.whatWeDoTop{
+    grid-template-areas: ". wwdTitle line2 wwdPara .";
+}
+
+.wwdTitle{grid-area: wwdTitle}
+    ;
+.line2{
+    grid-area: line2;
+    height: 7rem;
+}
+
+.wwdPara{
+    grid-area: wwdPara;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+}
+
+.services{
+    display: grid;
+    grid-template-columns:0.1fr repeat(3, 0.75fr) 0.1fr;
+    grid-template-rows: auto;
+    grid-template-areas: ". grassCutting fencing decking ."
+    ". carpentry jetwashing painting .";
+}
+
+.services img{
+    width: 18rem;
+    height: 13rem;
+    padding: 1rem;
+    border-radius: 1.5rem;
+}
+
+.services p{
+    display: grid;
+    justify-content: center;
+    padding: 1.5rem;
+    letter-spacing: 0.1rem;
+    line-height: 1.5rem;
+}
+
+.card{
+    background-color: #fff;
+    box-shadow: 1px 5px 4px rgba(0, 0, 0, 0.75);
+    border-radius: 2.5rem;
+    padding: 0.5rem;
+    margin: 3rem;
+}
+
+.grassCutting{grid-area: grassCutting;}
+.fencing{grid-area: fencing;}
+.decking{grid-area: decking;}
+.carpentry{grid-area: carpentry;}
+.jetwashing{grid-area: jetwashing;} 
+.painting{grid-area: painting;}
+
+/* contact */
+.companyInfo{
+    grid-template-areas: ". ciTitle line3 ciDetails .";
+}
+
+.ciTitle{grid-area: ciTitle;}
+.line3{grid-area: line3;}
+.ciDetails{grid-area: ciDetails;}
+
+.form{
+    display: grid;
+    grid-template-columns: 0.1fr 1fr 0.25fr 1fr 0.1fr;
+    grid-template-rows: auto;
+    grid-template-areas: ". fName . phone ."
+    ". lName . email ." ". message message message ."
+    ". send . . .";
+}
+
+input, label{
+    display: block;
+}
+
+label{
+    padding-bottom: 1rem;
+}
+
+input[type=text], input[type=tel], input[type=email] {
+    padding: 1rem;
+    width: 24rem;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+    border: none;
+    object-fit: cover;
+    width: 100%;
+}
+
+.fName{
+    grid-area: fName;
+    margin: 3rem 0 0 0;
+}
+
+.lName{grid-area: lName;}
+
+.phone{
+    grid-area: phone;
+    margin: 3rem 0 0 0;
+}
+
+.email{grid-area: email;}
+
+.message{
+    grid-area: message;
+    margin: 0 0 3rem 0;
+}
+
+textarea{
+    width: 77.5rem;
+    height: 15rem;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 0.5rem;
+    resize: none;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.send{
+    grid-area: send;
+    margin-top: 1rem;
+}
+
+/* footer */
+footer{
+    display: grid;
+    grid-template-columns: 0.1fr 1fr 0.25fr 1fr 0.1fr;
+    grid-template-rows: 5rem;
+    grid-template-areas: ". copyright . socialBottom .";
+}
+
+.copyright{
+    grid-area: copyright;
+    margin: 1rem 0;
+}
+
+.socialBottom{grid-area: socialBottom;}
+
+/* small computer */
+@media(max-width:1275px){
+    /* nav */
+    .search button{font-size: 0.85rem; margin-left: 1rem;}
+    /* hero */
+    .captionCapital{font-size: 1.25rem;}
+    .captionTitle{font-size: 3.25rem; padding: 2rem 0;}
+    .captionButton{padding: 0.5rem;}
+    .collage{align-items: flex-start;}
+    .collage img{width: 26rem;}
+    /* portfolio */
+    .portfolio, .contact{padding: 3.5rem 0;}
+    .portfolioTop{grid-template-columns: 1fr; grid-template-areas: "inspire" "line1" "iText";}
+    .inspire, .wwdTitle, .ciTitle{text-align: center;}
+    .line1, .line2, .line3{transform: rotate(90deg); height: 8rem;}
+    .iText, .wwdPara, .ciDetails{padding: 0 1rem;}
+    .portfolioImg{grid-template-columns: 0.1fr 1fr 1fr 0.1fr; grid-template-areas: ". item1 item2 ." ". item3 item4 ." ". item5 item6 ." ". item7 item8 ."; justify-self: center;}
+    .item9{display: none;}
+    /* services */
+    .whatWeDo{padding-top: 3.5rem;}
+    .whatWeDoTop{grid-template-columns: 1fr; grid-template-areas: "wwdTitle" "line2" "wwdPara";}
+    .services{grid-template-columns: 1fr 1fr; grid-template-areas: "grassCutting fencing" "decking carpentry" "jetwashing painting";}
+    .services img{width: 16rem; height: 10rem; padding: 0.5rem;}
+    .card{margin: 1.5rem;}
+    /* contact */
+    .companyInfo{grid-template-columns: 1fr; grid-template-areas: "ciTitle" "line3" "ciDetails";}
+    .ciDetails p{margin: auto;}
+    .form{grid-template-columns: 1fr  0.1fr 1fr; grid-template-areas: "fName . phone" "lName . email" "message message message" "send . ."; margin: 0 1rem;}
+    input, label{margin: auto;}
+    /* footer */
+    footer{grid-template-columns: 2fr; grid-template-areas: "copyright socialBottom";}
+    .copyright{margin-left: 1rem;}
+    }
+
+/* tablet and small desktop */
+@media(max-width:900px){
+/* nav */
+.logo {padding-top: 1rem; padding-left: 1rem;}
+.logo img{width: 5.5rem; height: 3rem;}
+.search button{font-size: 0.6rem; padding: 0.25rem 0.5rem; margin-left: 1rem;}
+/* hero */
+.hero, .portfolioTop, .whatWeDoTop, .companyInfo{padding-bottom: 4rem;}
+.hero{padding-top: 3.5rem;}
+.captionCapital{font-size: 1rem; text-align: center;}
+.captionTitle{font-size: 2.5rem; padding: 2rem 0; text-align: center;}
+.captionButton{padding: 0.25rem; width: 12rem;}
+div .cta{margin: auto;}
+.iconify{padding: 0.5rem 0.5rem 0 0;}
+.captionPortfolio{font-size: 1.25rem; font-weight: normal; letter-spacing: 0.1rem;}
+.collage img{width: 20rem;}
+/* portfolio */
+.portfolio, .contact{padding: 3.5rem 0;}
+.portfolioTop{grid-template-columns: 1fr; grid-template-areas: "inspire" "line1" "iText";}
+.inspire, .wwdTitle, .ciTitle{text-align: center;}
+.line1, .line2, .line3{transform: rotate(90deg); height: 8rem;}
+.iText, .wwdPara, .ciDetails{padding: 0 1rem;}
+.portfolioImg{grid-template-columns: 0.1fr 1fr 1fr 0.1fr; grid-template-areas: ". item1 item2 ." ". item3 item4 ." ". item5 item6 ." ". item7 item8 ."; justify-self: center;}
+.item9{display: none;}
+/* services */
+.whatWeDo{padding-top: 3.5rem;}
+.whatWeDoTop{grid-template-columns: 1fr; grid-template-areas: "wwdTitle" "line2" "wwdPara";}
+.services{grid-template-columns: 1fr 1fr; grid-template-areas: "grassCutting fencing" "decking carpentry" "jetwashing painting";}
+.services img{width: 16rem; height: 10rem; padding: 0.5rem;}
+.card{margin: 1.5rem;}
+/* contact */
+.companyInfo{grid-template-columns: 1fr; grid-template-areas: "ciTitle" "line3" "ciDetails";}
+.ciDetails p{margin: auto;}
+.form{grid-template-columns: 1fr  0.1fr 1fr; grid-template-areas: "fName . phone" "lName . email" "message message message" "send . ."; margin: 0 1rem;}
+input, label{margin: auto;}
+/* footer */
+footer{grid-template-columns: 2fr; grid-template-areas: "copyright socialBottom";}
+.copyright{margin-left: 1rem;}
+}
+
+/* large mobile */
+@media (max-width:660px){
+    /* nav */
+    .logo {padding-top: 1rem; padding-left: 1rem;}
+    .logo img{width: 5.5rem; height: 3rem;}
+    .socialTop{display: none;}
+    .search{display: none;}
+    /* hero */
+    .hero, .portfolioTop, .whatWeDoTop, .companyInfo{padding-bottom: 3.5rem;}
+    .hero{grid-template-columns: 1fr; grid-template-areas: "cta" "collage"; padding-top: 3.5rem;}
+    .captionCapital{font-size: 1.25rem; text-align: center;}
+    .captionTitle{font-size: 3.25rem; padding: 2rem 0; text-align: center;}
+    .captionButton{padding: 0.25rem; width: 12rem; margin: 0 0 2.5rem 1rem;}
+    .iconify{padding: 0.5rem 0.5rem 0 0;}
+    .captionPortfolio{font-size: 1.25rem; font-weight: normal; letter-spacing: 0.1rem;}
+    .collage img{width: 22rem; margin: auto;}
+    /* portfolio */
+    .portfolio, .contact{padding: 2.5rem 0;}
+    .portfolioTop{grid-template-columns: 1fr; grid-template-areas: "inspire" "line1" "iText";}
+    .inspire, .wwdTitle, .ciTitle{text-align: center;}
+    .line1, .line2, .line3{transform: rotate(90deg); height: 8rem;}
+    .iText, .wwdPara, .ciDetails{padding: 0 1rem;}
+    .portfolioImg{grid-template-columns: 0.1fr 1fr 1fr 0.1fr; grid-template-areas: ". item1 item2 ." ". item3 item4 ." ". item5 item6 ." ". item7 item8 ."; justify-self: center;}
+    .item9{display: none;}
+    /* services */
+    .whatWeDo{padding-top: 2.5rem;}
+    .whatWeDoTop{grid-template-columns: 1fr; grid-template-areas: "wwdTitle" "line2" "wwdPara";}
+    .services{grid-template-columns: 1fr; grid-template-areas: "grassCutting" "fencing" "decking" "carpentry" "jetwashing" "painting";}
+    .services img{width: 16rem; height: 10rem; padding: 0.5rem;}
+    .card{margin: 1.5rem;}
+    /* contact */
+    .companyInfo{grid-template-columns: 1fr; grid-template-areas: "ciTitle" "line3" "ciDetails";}
+    .ciDetails{text-align: center;}
+    .form{grid-template-columns: 1fr; grid-template-areas: "fName" "lName" "phone" "email" "message" "send"; margin: 0 1rem;}
+    input, label{margin: auto;}
+    .phone{margin: 0;}
+    /* footer */
+    footer{grid-template-columns: 1fr; grid-template-areas: "copyright" "socialBottom";}
+    .copyright{margin-left: 1rem;}
+}
+
+/* mobile */
+@media (max-width:362px){
+    /* nav */
+    .logo {padding-top: 1rem; padding-left: 1rem;}
+    .logo img{width: 5.5rem; height: 3rem;}
+    .socialTop{display: none;}
+    /* cta */
+    .hero, .portfolioTop, .whatWeDoTop, .companyInfo{padding-bottom: 2.5rem;}
+    .hero{grid-template-columns: 1fr; grid-template-areas: "cta" "collage"; padding-top: 2.5rem;}
+    .captionCapital{font-size: 1rem; text-align: center;}
+    .captionTitle{font-size: 3rem; padding: 2rem 0; text-align: center;}
+    .captionButton{padding: 0.25rem; width: 10rem; margin: 0 0 2.5rem 1rem;}
+    .iconify{padding: 0.5rem 0.5rem 0 0;}
+    .captionPortfolio{font-size: 1rem; font-weight: normal; letter-spacing: 0.1rem;}
+    .collage img{width: 20rem; margin: auto;}
+    /* portfolio */
+    .portfolio, .contact{padding: 2.5rem 0;}
+    .portfolioTop{grid-template-columns: 1fr; grid-template-areas: "inspire" "line1" "iText";}
+    .inspire, .wwdTitle, .ciTitle{text-align: center;}
+    .line1, .line2, .line3{transform: rotate(90deg); height: 8rem;}
+    .iText, .wwdPara, .ciDetails{padding: 0 1rem;}
+    .portfolioImg{grid-template-columns: 0.1fr 1fr 1fr 0.1fr; grid-template-areas: ". item1 item2 ." ". item3 item4 ." ". item5 item6 ." ". item7 item8 ."; justify-self: center;}
+    .item9{display: none;}
+    /* services */
+    .whatWeDo{padding-top: 2.5rem;}
+    .whatWeDoTop{grid-template-columns: 1fr; grid-template-areas: "wwdTitle" "line2" "wwdPara";}
+    .services{grid-template-columns: 1fr; grid-template-areas: "grassCutting" "fencing" "decking" "carpentry" "jetwashing" "painting";}
+    .services img{width: 16rem; height: 10rem; padding: 0.5rem;}
+    .card{margin: 1rem;}
+    /* contact */
+    .companyInfo{grid-template-columns: 1fr; grid-template-areas: "ciTitle" "line3" "ciDetails";}
+    .ciDetails{text-align: center;}
+    .form{grid-template-columns: 1fr; grid-template-areas: "fName" "lName" "phone" "email" "message" "send"; margin: 0 1rem;}
+    input, label{margin: auto;}
+    .phone{margin: 0;}
+    /* footer */
+    footer{grid-template-columns: 1fr; grid-template-areas: "copyright" "socialBottom";}
+    .copyright{margin-left: 1rem;}
+}
