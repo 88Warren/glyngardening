@@ -1,3 +1,7 @@
+if (process.env.NODE_ENV !== "production") {
+    require('dotenv').config();
+}
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const { getDefaultSettings } = require('http2');
@@ -10,7 +14,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Serving on port ${PORT}`)
-})
+});
 
 //View engine setup
 app.engine('ejs', ejsMate)
