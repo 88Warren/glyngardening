@@ -33,10 +33,6 @@
 }
 
 /* navbar */
-header{
-    position: fixed;
-}
-
 .container {
     display: grid;
     grid-template-columns: 0.1fr 0.85fr 1fr 0.25fr 0.25fr 0.1fr;
@@ -47,6 +43,10 @@ header{
     height: auto;
     /* width: 100%; */
     /* max-width: 1000px; */
+}
+
+div.stay{
+    position: fixed;
 }
 
 #logo{
