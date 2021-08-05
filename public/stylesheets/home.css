@@ -27,6 +27,11 @@
     margin: auto;
 }
 
+/* links */
+.link{
+    z-index: 9999;
+}
+
 /* navbar */
 .container {
     display: grid;
