@@ -45,9 +45,9 @@
     /* max-width: 1000px; */
 }
 
-div.stay{
+/* div.stay{
     position: fixed;
-}
+} */
 
 #logo{
     grid-area: logo;
