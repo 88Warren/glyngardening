@@ -57,6 +57,7 @@ app.post('/send', (req, res) => {
             }
             console.log('Message %s sent: %s', info.messageId, info.response);
         });
+        //redirects here 
             res.writeHead(301, { Location: '/' });
             res.end();
     });

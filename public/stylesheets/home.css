@@ -410,6 +410,10 @@ textarea{
     margin-top: 1rem;
 }
 
+.send:hover{
+    cursor: pointer;
+}
+
 /* footer */
 footer{
     display: grid;
