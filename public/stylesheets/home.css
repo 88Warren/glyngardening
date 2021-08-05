@@ -33,6 +33,10 @@
 }
 
 /* navbar */
+header{
+    position: fixed;
+}
+
 .container {
     display: grid;
     grid-template-columns: 0.1fr 0.85fr 1fr 0.25fr 0.25fr 0.1fr;
