@@ -33,55 +33,30 @@ app.get('/', (req, res) => {
 })
 
 app.post('/send', (req, res) => {
-    const output = `
-        <p>You have a new contact request</p>
-        <h3>Contact Details</h3>
-        <ul>
-            <li>Name: ${req.body.fname}</li>
-            <li>Name: ${req.body.lname}</li>
-            <li>Name: ${req.body.phone}</li>
-            <li>Name: ${req.body.email}</li>
-        </ul>
-        <h3>Message</h3>
-        <p>${req.body.message}</p>
-    `
-});
-    // console.log(req.body);
-
-
-    async function main() {
-        let testAccount = await nodemailer.createTestAccount();
         let transporter = nodemailer.createTransport({
             //domain host where website is held
             host: 'stmp.mail.yahoo.com', //smtp.
             port: 465,
-            service: 'yahoo',
             secure: true,
             auth:  {
                 user: 'warren_laura@yahoo.co.uk',
                 pass: 'qhq!ujb.QKF4upq7uaq'
-            },
-                debug: false,
-                logger: true,
-            tls:{
-                rejectUnauthorized: false
             }
         });
 
-        let info = await transporter.sendMail({
+        let mailOptions = {
             from: `${req.body.email}`,
             to: 'warren_laura@yahoo.co.uk',
             subject: `Message from ${req.body.fname}: ${req.body.lname}: ${req.body.phone}`,
             text: req.body.message
-        });
+        };
 
-    transporter.sendMail(mailOptions, (error, info) => {
-        if(error){
-            return console.log(error);
-        }
-            console.log('Email sent: %s', info.messageId);
-            console.log('Preview URL: %s', node.mailer.getTestMeassageUrl(info));
-
-            res.render('home')
+        transporter.sendMail(mailOptions, (error, info) => {
+            if (error) {
+                return console.log(error);
+            }
+            console.log('Message %s sent: %s', info.messageId, info.response);
         });
-    }
+            res.writeHead(301, { Location: 'index.html' });
+            res.end();
+    });
