@@ -49,13 +49,16 @@ app.post('/send', (req, res) => {
 
     let transporter = nodemailer.createTransport({
         //domain host where website is held
-        host: 'mail.yahoo.com', //smtp.
-        port: 587,
+        host: 'stmp.mail.yahoo.com', //smtp.
+        port: 465,
+        service: 'yahoo',
         secure: false,
         auth:  {
             user: 'warren_laura@yahoo.co.uk',
-            pass: 'ayjddsgkvkyztsko'
+            pass: 'qhq!ujb.QKF4upq7uaq'
         },
+            debug: false,
+            logger: true,
         tls:{
             rejectUnauthorized: false
         }

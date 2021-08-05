@@ -4,9 +4,13 @@
     margin: 0;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 /* fonts */
 @font-face {
-    font-family: 'gardening'; 
+    font-family: 'gardening';
     src: url('/fonts/DK\ Garden\ Gnome.otf');
 }
 
@@ -41,13 +45,7 @@
     background: #e5e5e5;
     position: relative;
     height: auto;
-    /* width: 100%; */
-    /* max-width: 1000px; */
 }
-
-/* div.stay{
-    position: fixed;
-} */
 
 #logo{
     grid-area: logo;
@@ -61,28 +59,27 @@
 #primary{
     grid-area: list;
 }
-  
+
 nav#primary ul {
-    grid-area: list;
     display: flex;
     align-items: center;
     height: 100%;
 }
-  
+
 nav#primary li {
     display: block;
 }
-  
+
 nav#primary li {
     margin-left: 3rem;
 }
-  
+
 nav#primary li a {
     text-decoration: none;
     font-size: 1.1rem;
     transition: color .2s;
 }
-  
+
 #toggle {
     grid-area: socialTop;
     display: none;
@@ -91,7 +88,7 @@ nav#primary li a {
     text-decoration: none;
     transition: color .2s;
 }
-  
+
 #toggle i {
     display: block;
     background:#38A639;
@@ -100,11 +97,11 @@ nav#primary li a {
     border-radius: 0.25rem;
     transition: color .2s;
 }
-  
+
 nav#primary li a:hover, #toggle:hover {
     color: #136637;
 }
-  
+
 #toggle:hover i {
     background: #136637;
 }
@@ -121,11 +118,54 @@ nav#primary li a:hover, #toggle:hover {
     align-items: center;
 }
 
+.search a{
+    text-decoration: none;
+}
+
 .search button, .send button{
     box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.75);
     border-radius: 15px;
     padding: 0.5rem 1rem;
-} 
+}
+
+/* back to top button */
+#back2Top {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background-color: #38A639;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    transition: background-color .2s, opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden; 
+    z-index: 1000;
+}
+
+#back2Top g {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+#back2Top:hover {
+    cursor: pointer;
+    background-color: #136637;
+}
+
+#back2Top:active {
+    background-color: #136637;
+}
+
+#back2Top.show{
+    opacity: 1;
+    visibility: visible;
+}
+
 
 /* hero */
 .hero, .portfolioTop, .whatWeDoTop, .companyInfo{
@@ -246,8 +286,8 @@ nav#primary li a:hover, #toggle:hover {
     grid-template-areas: ". wwdTitle line2 wwdPara .";
 }
 
-.wwdTitle{grid-area: wwdTitle}
-    ;
+.wwdTitle{grid-area: wwdTitle;}
+
 .line2{
     grid-area: line2;
     height: 7rem;
@@ -295,7 +335,7 @@ nav#primary li a:hover, #toggle:hover {
 .fencing{grid-area: fencing;}
 .decking{grid-area: decking;}
 .carpentry{grid-area: carpentry;}
-.jetwashing{grid-area: jetwashing;} 
+.jetwashing{grid-area: jetwashing;}
 .painting{grid-area: painting;}
 
 /* contact */
