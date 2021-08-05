@@ -57,6 +57,6 @@ app.post('/send', (req, res) => {
             }
             console.log('Message %s sent: %s', info.messageId, info.response);
         });
-            res.writeHead(301, { Location: 'index.html' });
+            res.writeHead(301, { Location: 'home.ejs' });
             res.end();
     });
