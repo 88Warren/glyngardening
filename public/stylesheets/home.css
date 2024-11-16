@@ -224,7 +224,7 @@ nav#primary li a:hover, #toggle:hover {
 }
 
 /* portfolio */
-.portfolio, .contact{
+.portfolio, #contact{
     background-color: #e5e5e5;
     padding: 5rem 0;
 }

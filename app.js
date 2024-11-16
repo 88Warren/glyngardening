@@ -8,7 +8,7 @@ const { getDefaultSettings } = require('http2');
 const path = require('path');
 const ejsMate = require('ejs-mate');
 const nodemailer = require('nodemailer');
-
+const smtpTransport = require("nodemailer-smtp-transport")
 const app = express();
 
 const PORT = process.env.PORT || 3000;
@@ -33,31 +33,59 @@ app.get('/', (req, res) => {
 })
 
 app.post('/send', (req, res) => {
-        let transporter = nodemailer.createTransport({
+        let transporter = nodemailer.createTransport(smtpTransport ({
             //domain host where website is held
-            host: 'stmp.mail.yahoo.com', //smtp.
-            port: 465,
-            secure: true,
+            service: "gmail",
+            // host: 'stmp.mail.yahoo.com', //smtp.
+            // port: 465,
+            // secure: true,
             auth:  {
-                user: 'warren_laura@yahoo.co.uk',
-                pass: 'qhq!ujb.QKF4upq7uaq'
+                user: 'lauramwar88@gmail.com',
+                pass: 'Cy3k5jz7x?'
             }
-        });
+        })
+        );
 
-        let mailOptions = {
-            from: `${req.body.email}`,
-            to: 'warren_laura@yahoo.co.uk',
-            subject: `Message from ${req.body.fname}: ${req.body.lname}: ${req.body.phone}`,
-            text: req.body.message
+        var fname = req.body.fname
+        var lname= req.body.lname
+        var email = req.body.email
+        var phone = req.body.phone
+        var message =req.body.message
+
+        const ejs = require("ejs");
+
+//   ejs.renderFile(__dirname + "/views/home.ejs", { fname: fname, lname: lname, phone: phone }, function (err, data) {
+//     if (err) {
+//         console.log(err);
+//     } else {
+        
+            let mailOptions = {
+                from: 'lauramwar88@gmail.com',
+                to: email,
+                subject: `Message from ${req.body.fname}: ${req.body.lname}: ${req.body.phone}`,
+            text:req.body.message
+            
         };
+    
+
+        // let mailOptions = {
+        //     from: 'lauramwar88@gmail.com',
+        //     to:req.body.to,
+        //     subject: `Message from ${req.body.fname}: ${req.body.lname}: ${req.body.phone}`,
+        //     text: req.body.message
+        // };
 
         transporter.sendMail(mailOptions, (error, info) => {
             if (error) {
-                return console.log(error);
+                 console.log("there was an error", error)
             }
             console.log('Message %s sent: %s', info.messageId, info.response);
+              
+            // return res.status(200).json({message: "message sent"})
         });
+    // }
         //redirects here 
             res.writeHead(301, { Location: '/' });
             res.end();
-    });
+    })
+// });
